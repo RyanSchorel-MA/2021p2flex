@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" defer src="index.js"></script>
     </head>
 <body onload="init()">
     <div class="selectPlayers">
-        <div class="amountButton" onclick="alert('idk')">2</div>
-        <div class="amountButton" onclick="game.start(3)">3</div>
-        <div class="amountButton" onclick="game.start(4)">4</div>
+        <div class="amountButton" onclick='createPlayers(2)'>2</div>
+        <div class="amountButton" onclick='init(game.start(3))'>3</div>
+        <div class="amountButton">4</div>
     </div>
     <div class="main">
         <div class="ui">
-            <div class="roll"></div>
+            <div class="roll" onclick='game.roll(game.players[game.playerTurn])'></div>
             <div class="playerTurn"></div>
         </div>
     <div class="board">
